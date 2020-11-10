@@ -8,13 +8,17 @@
     "start": "node back_end/server",
     "server": "supervisor back_end/server",
     "client": "npm start --prefix front_end",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node back_end/seeder",
+    "data:destroy": "node back_end/seeder -d"
   },
   "author": "Girish",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "mongoose": "^5.10.9"
   },
   "devDependencies": {

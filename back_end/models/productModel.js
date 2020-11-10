@@ -1,6 +1,6 @@
-import { mongoose, Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const reviewSchema = Schema(
+const reviewSchema = mongoose.Schema(
     {
         name : { type: String, required: true },
         rating : { type: Number, required: true },
@@ -12,10 +12,10 @@ const reviewSchema = Schema(
 )
 
 
-const productSchema = Schema(
+const productSchema = mongoose.Schema(
     {
         user: {
-            type:Schema.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref : "User",
             required: true
         },
