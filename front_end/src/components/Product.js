@@ -24,7 +24,7 @@ const Product = ({product}) => {
                     />
                 </Card.Text>
 
-                <Card.Text as="h3" className="h3" >₹{Math.floor(product.price*73)}</Card.Text>
+                <Card.Text as="h3" className="h3" >₹{Math.floor(product.price)}</Card.Text>
 
             </Card.Body>
         </Card>
